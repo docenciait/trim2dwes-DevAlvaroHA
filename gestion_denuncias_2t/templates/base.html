@@ -11,12 +11,14 @@
         <nav>
             <ul>
                 {% if user.is_authenticated %}
-                    <li><a href="{% url 'lista_denuncias' %}">Denuncias</a></li>
-                    <li><a href="{% url 'crear_denuncia' %}">Crear denuncia</a></li>
+                    <li><a href="{% url 'list_denuncia' %}">Denuncias</a></li>
+                    <li><a href="{% url 'create_denuncia' %}">Crear denuncia</a></li>
                     <li><a href="{% url 'logout' %}">Cerrar sesión</a></li>
+                    
                 {% else %}
                     <li><a href="{% url 'login' %}">Iniciar sesión</a></li>
-                    <li><a href="{% url 'registro' %}">Registrarse</a></li>
+                    <li><a href="{% url 'register' %}">Registrarse</a></li>
+                    <li><a href="{% url 'profile' %}">Profile</a></li>
                 {% endif %}
             </ul>
         </nav>
